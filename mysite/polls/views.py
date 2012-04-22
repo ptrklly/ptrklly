@@ -3,6 +3,20 @@ from polls.models import Poll
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, get_object_or_404
 
+def base(request):
+    return render_to_response('base.html')
+
+def home(request):
+    return render_to_response('home.html')
+
+def cv(request):
+    return render_to_response('cv.html')
+
+
+
+
+
+
 def index(request):
     latest_poll_list = Poll.objects.all().order_by('-pub_date')[:5]
     return render_to_response('index.html', {'latest_poll_list': latest_poll_list})
@@ -16,3 +30,6 @@ def results(request, poll_id):
 
 def vote(request, poll_id):
     return HttpResponse("You're voting on poll %s." % poll_id)
+
+
+
