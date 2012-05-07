@@ -1,29 +1,33 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block body %}
 
 <div class="sixteen columns">
     <h1 class="remove-bottom" style="margin-top: 40px">Peter Kelly</h1>
-    <h5>Version 0.1</h5>
+    <h5>In ongoing beta.</h5>
     <hr />
 </div>
 <div class="sixteen columns">
 
+    <div class="one-third column alpha">
+    <img src="{% get_static_prefix%}images/everest.jpg" style="max-width: 100%;" alt="A photo of me." />
+    </div>
+    <div class="one-third column">
+        <h3>About Me</h3>
+        <p> I'm an advocate of impact investing, triple-bottom-line business, and entrepreneurship more generally.</p>
+        <p> For 3 years I worked as a consultant providing quantitative and qualitative analysis on climate policy, renewable energy, and the carbon market.  </p>
+        <p> I've always been interested in clothing and textiles and in 2011 I started programming and cofounded <a href="http://www.clothesliner.com/demonstration">Clothesliner</a>, a website that described the fit of clothing by comparing any item to something you're familiar with. </p>
+        <p> I currently work as an independent consultant in the carbon market / impact investing space and am always looking to meet other entrepreneurs, social or otherwise. Email me at ptrklly (at gmail). </p>
+    </div>
+    <div class="one-third column omega">
+        <h3> Find me </h3>
+            <ul class="circle">
+                <li>on <a href="www.linkedin.com/ptrklly/">LinkedIn</a> </li>
+                <li>on <a href="www.github.com/ptrklly/">Github</a></li>
+                <li>on <a href="www.twitter.com/ptrklly/">Twitter</a></li>
+            </ul>
+    </div>
 </div>
-<div class="one-third column">
-    <h3>About Me</h3>
-    <p> I'm an advocate of impact investing, triple-bottom-line business, and entrepreneurship more generally.</p>
-    <p> For 3 years I worked as a consultant providing quantitative and qualitative analysis on climate and energy policy and the carbon market. </p>
-    <p> I've always been interested in clothing and textiles and in 2011 I started programming and cofounded <a href="http://www.clothesliner.com/demonstration">Clothesliner</a>, a website that described the fit of clothing by comparing any item to something you're familiar with. </p>
-    <p> I'm currently an independent consultant working in the carbon market and always looking to meet other entrepreneurs, social or otherwise. Email me at ptrklly (at gmail). </p>
-</div>
-<div class="one-third column">
-    <h3>Photo placeholder.</h3>
-    <img src="boat.gif" alt="Big Boat" />
-
-
-</div>
-
 
 
 {% endblock body %}
