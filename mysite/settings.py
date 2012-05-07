@@ -58,14 +58,14 @@ MEDIA_URL = ''
 # Example: "/home/media/media.lawrence.com/static/"
 
 # info for serving static from S3
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+#STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
-AWS_ACCESS_KEY_ID = 'AKIAIO35ASQLEDHXG3PA'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'pksite'
-AWS_BUCKET_NAME = 'pksite'
+#AWS_ACCESS_KEY_ID = 'AKIAIO35ASQLEDHXG3PA'
+#AWS_SECRET_ACCESS_KEY = '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'
+#AWS_STORAGE_BUCKET_NAME = 'pksite'
+#AWS_BUCKET_NAME = 'pksite'
 
-STATIC_ROOT = ''
+#STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -128,7 +128,8 @@ INSTALLED_APPS = (
     'polls',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'storages',
+#    'storages',
+#    'boto',
 )
 
 # A sample logging configuration. The only tangible logging
