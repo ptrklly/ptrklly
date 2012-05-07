@@ -5,16 +5,14 @@
 
 {% block body %}
 
-<div class="container">
-    <div class="sixteen columns">
-        <h1>{{ poll.question }}</h1>
-        <ul>
-        {% for choice in poll.choice_set.all %}
-            <li>{{ choice.choice }}</li>
-        {% endfor %}
-        </ul>
-    </div>
+<div class="sixteen columns">
+    <h1>{{ poll.question }}</h1>
+    <ul>
+    {% for choice in poll.choice_set.all %}
+        <li>{{ choice.choice }}</li>
+    {% endfor %}
+    </ul>
+</div>
 
-</div><!-- container -->
 
 {% endblock body %}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load static %}
+{% block body %}
+  <div class="page_title sixteen columns">
+    <h4>Login</h4>
+  </div><!--closes page_title-->
+  
+  
+  <div id="login" class="">
+    <form action="/accounts/login/" method="post">
+      {% csrf_token %}
+        <label>{{user_form.username.label}}</label>
+        {{user_form.username.errors}}
+      <br/>
+
+        {{user_form.username}}
+      <br/>
+
+        <label>{{user_form.password.label}}</label>
+        {{user_form.password.errors}}
+      <br/>
+        {{user_form.password}}
+
+<!--      <label>Username:</label>
+      <br/>
+      <input type="text" name="username" />
+      <br/>
+      <label>Password:</label>
+      <br/>
+      <input type="password" name="password" />-->
+      <input type="hidden" name="next" value="{{ next }}" />
+      <input type="submit" value="Login" />
+    </form>
+  </div><!--closes login-->
+  
+  <h4>New User?</h4>
+  <button class="clickable dropdown pointer">Register here</button>
+
+  <dd>
+    <div id="register">
+      <form action="" method="post" enctype="multipart/form-data" id="search_reg_form">
+	{% csrf_token %}
+	{{user_form.non_field_errors}}
+	<label>{{user_form.username.label}}</label>
+        {{user_form.username.errors}}
+      <br/>
+
+	{{user_form.username}}
+      <br/>
+
+	<label>{{user_form.password.label}}</label>
+	{{user_form.password.errors}}
+      <br/>
+        {{user_form.password}}
+      <br/>
+	{{form}}
+      <br/>
+	<input type="submit" value="Submit!" />
+
+
+      </form>
+  </dd>
+  </div><!--closes register-->
+{% endblock body %}

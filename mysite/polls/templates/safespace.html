@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<div class="sixteen columns">
+    <h1 class="remove-bottom" style="margin-top: 40px">This is a safe space</h1>
+</div>
+
+    <h3>Login</h3>
+      <div id="login" class="">
+        <form action="/accounts/login/" method="post">
+          {% csrf_token %}
+            <label>{{user_form.username.label}}</label>
+            {{user_form.username.errors}}
+          <br/>
+            {{user_form.username}}
+          <br/>
+            <label>{{user_form.password.label}}</label>
+            {{user_form.password.errors}}
+          <br/>
+            {{user_form.password}}
+          <input type="hidden" name="next" value="{{ next }}" />
+          <input type="submit" value="Login" />
+        </form>
+      </div><!--closes login-->
+
+
+
+{% endblock body %}

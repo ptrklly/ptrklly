@@ -12,5 +12,13 @@ urlpatterns = patterns('',
     (r'^$', 'polls.views.home'),
     (r'^base/', 'polls.views.base'),
     (r'^cv', 'polls.views.cv'),
+    (r'^safespace', 'polls.views.safespace'),
+    (r'^login', 'polls.views.login'),
+    (r'^contact', 'polls.views.contact'),
+    (r'^thanks', 'polls.views.thanks'),
+    (r'^register', 'polls.views.register'),
+    (r'^jack', 'polls.views.create_search_profile'),
+
+
 
 )
