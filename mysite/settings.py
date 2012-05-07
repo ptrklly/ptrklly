@@ -56,6 +56,15 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
+
+# info for serving static from S3
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+AWS_ACCESS_KEY_ID = 'AKIAIKCIQTFH5VWHT4HQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'roommater'
+AWS_BUCKET_NAME = 'roommater'
+
 STATIC_ROOT = ''
 
 # URL prefix for static files.
@@ -119,6 +128,7 @@ INSTALLED_APPS = (
     'polls',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'storages',
 )
 
 # A sample logging configuration. The only tangible logging
